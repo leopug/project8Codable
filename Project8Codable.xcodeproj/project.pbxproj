@@ -13,6 +13,9 @@
 		3F315B9D23BFA0500049A1D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F315B9B23BFA0500049A1D0 /* Main.storyboard */; };
 		3F315B9F23BFA0520049A1D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F315B9E23BFA0520049A1D0 /* Assets.xcassets */; };
 		3F315BA223BFA0520049A1D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F315BA023BFA0520049A1D0 /* LaunchScreen.storyboard */; };
+		3F37BF9A23C203D500F407A2 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37BF9923C203D500F407A2 /* Petition.swift */; };
+		3F37BF9C23C2045000F407A2 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37BF9B23C2045000F407A2 /* Petitions.swift */; };
+		3F37BF9E23C38D4F00F407A2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37BF9D23C38D4F00F407A2 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		3F315B9E23BFA0520049A1D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F315BA123BFA0520049A1D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F315BA323BFA0520049A1D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F37BF9923C203D500F407A2 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
+		3F37BF9B23C2045000F407A2 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		3F37BF9D23C38D4F00F407A2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				3F315B9523BFA0500049A1D0 /* AppDelegate.swift */,
 				3F315B9723BFA0500049A1D0 /* SceneDelegate.swift */,
 				3F315B9923BFA0500049A1D0 /* ViewController.swift */,
+				3F37BF9D23C38D4F00F407A2 /* DetailViewController.swift */,
+				3F37BF9923C203D500F407A2 /* Petition.swift */,
+				3F37BF9B23C2045000F407A2 /* Petitions.swift */,
 				3F315B9B23BFA0500049A1D0 /* Main.storyboard */,
 				3F315B9E23BFA0520049A1D0 /* Assets.xcassets */,
 				3F315BA023BFA0520049A1D0 /* LaunchScreen.storyboard */,
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F315B9A23BFA0500049A1D0 /* ViewController.swift in Sources */,
+				3F37BF9A23C203D500F407A2 /* Petition.swift in Sources */,
 				3F315B9623BFA0500049A1D0 /* AppDelegate.swift in Sources */,
+				3F37BF9E23C38D4F00F407A2 /* DetailViewController.swift in Sources */,
 				3F315B9823BFA0500049A1D0 /* SceneDelegate.swift in Sources */,
+				3F37BF9C23C2045000F407A2 /* Petitions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V53CJ86VCG;
 				INFOPLIST_FILE = Project8Codable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V53CJ86VCG;
 				INFOPLIST_FILE = Project8Codable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
