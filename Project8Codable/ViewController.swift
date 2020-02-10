@@ -34,20 +34,24 @@ class ViewController: UITableViewController {
     }
     
     @objc func showCredit(){
-        
-        let ac = UIAlertController(title: urlString, message: nil, preferredStyle: .alert)
-        ac.addTextField()
-        
-        let submitAction = UIAlertAction(title: "Submit", style: .default) {
-            [weak self, weak ac] _ in
-            guard let searchResult = ac?.textFields?[0].text else { return }
-            guard let resultFiltered = self?.petitions.filter({$0.body.contains(searchResult)}) else{return}
-            self?.petitions = resultFiltered
-            self?.tableView.reloadData()
+        DispatchQueue.global(qos: .background).async {
+            [weak self] in
+            let ac = UIAlertController(title: self?.urlString, message: nil, preferredStyle: .alert)
+            ac.addTextField()
+            
+            let submitAction = UIAlertAction(title: "Submit", style: .default) {
+                [weak self, weak ac] _ in
+                guard let searchResult = ac?.textFields?[0].text else { return }
+                guard let resultFiltered = self?.petitions.filter({$0.body.contains(searchResult)}) else{return}
+                self?.petitions = resultFiltered
+                DispatchQueue.main.async {
+                    self?.tableView.reloadData()
+                }
+            }
+            
+            ac.addAction(submitAction)
+            self?.present(ac, animated: true)
         }
-        
-        ac.addAction(submitAction)
-        present(ac, animated: true)
     }
     
     func showError(){
@@ -65,18 +69,6 @@ class ViewController: UITableViewController {
             tableView.reloadData()
         }
         
-    }
-    
-    func showAlertToGetText() {
-        let ac = UIAlertController(title: "Enter the new list item:", message: nil, preferredStyle: .alert)
-        ac.addTextField()
-        
-        let submitAction = UIAlertAction(title: "Submit", style: .default) {
-            [weak self, weak ac] _ in
-            guard let searchResult = ac?.textFields?[0].text else { return }
-        }
-        ac.addAction(submitAction)
-        present(ac, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
